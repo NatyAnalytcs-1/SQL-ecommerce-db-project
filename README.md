@@ -42,6 +42,17 @@ Este repositório contém um conjunto de scripts SQL organizados para criação 
 - SGBD compatível (MySQL, PostgreSQL, SQL Server, etc.)
 
 ---
+## 🧠 Notas do Projeto
+
+Durante o desenvolvimento deste projeto, enfrentei alguns desafios e tomei decisões com base na praticidade e no aprendizado:
+
+- Mesmo com o diagrama EER como referência, realizei alterações na estrutura do banco sempre que identifiquei melhorias para refletir melhor os dados ou facilitar consultas.
+- Ao inserir os dados, precisei fazer novos ajustes nas tabelas, adaptando o banco de acordo com a necessidade.
+- Por ser um projeto pequeno e didático, optei por **não utilizar muitos comandos de `ALTER TABLE` ou `UPDATE`**. Em vez disso, preferi **excluir e reinserir os dados**, tornando o processo mais simples e direto.
+
+Esse projeto foi uma ótima oportunidade de prática com SQL, modelagem relacional e refinamento de consultas.
+
+---
 
 ## 📬 Contato
 
