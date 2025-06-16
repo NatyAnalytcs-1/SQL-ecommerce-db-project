@@ -1,3 +1,10 @@
+-- Script de criação do banco de dados E-COMMERCE
+-- Autor: NatyAnalytics
+-- Descrição: Criação das tabelas, relacionamentos, índices e regras de integridade
+-- Data: Junho/2025
+
+
+
 -- criação (BANCO E-COMMERCE)
 CREATE DATABASE IF NOT EXISTS e_commerce;
 USE e_commerce;
@@ -9,6 +16,7 @@ CREATE TABLE cliente (
     tipo_pessoa ENUM('PF', 'PJ'),
     cpf CHAR(11),
     cnpj CHAR(14),
+-- Verificação lógica com CHECK para CPF/CNPJ conforme tipo de pessoa
     CHECK (
         (tipo_pessoa = 'PF' AND cpf IS NOT NULL AND cnpj IS NULL) OR
         (tipo_pessoa = 'PJ' AND cnpj IS NOT NULL AND cpf IS NULL)
