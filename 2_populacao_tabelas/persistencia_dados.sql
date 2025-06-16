@@ -6,20 +6,20 @@
 USE e_commerce;
 
 -- persistência de dados na tabela STATUS PEDIDO
--- DESC status_pedido;
+-- DESC status_pedido; -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO status_pedido (descricao_status) VALUES
 ('Aguardando'), ('Processando'), ('Enviado'), ('Cancelado');
 SELECT * FROM status_pedido;
 
 
 -- persistência de dados na tabela STATUS ENTREGA
--- DESC status_entrega;
+-- DESC status_entrega; -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO status_entrega (descricao_status) VALUES
 ('Pendente'), ('Em transporte'), ('Entregue'), ('Devolvido');
 SELECT * FROM status_entrega;
 
 -- persistência de dados na tabela CLIENTE
--- DESC cliente;
+-- DESC cliente; -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO cliente (nome_cliente, tipo_pessoa, cpf, cnpj)
 VALUES
 ("Maria Jose Almeida", "PF", "12362555508", NULL),
@@ -32,7 +32,7 @@ SELECT * FROM cliente;
 
 
 -- persistência de dados na tabela ENDEREÇO
--- DESC endereco;
+-- DESC endereco;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO endereco (id_cliente, endereco, cep)
 VALUES
 (1, "Rua Pira - 156", "01519022"),
@@ -44,14 +44,14 @@ SELECT * FROM endereco;
 
 
 -- persistência de dados na tabela ESTOQUE
--- DESC estoque;
+-- DESC estoque;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO estoque (local)
 VALUES ("São Paulo"), ("Minas Gerais");
 SELECT * FROM estoque; 
 
 
 -- persistência de dados na tabela FORNECEDOR
--- DESC fornecedor;
+-- DESC fornecedor;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO fornecedor (razao_social, cnpj) VALUES
 ('Distribuidora Central', '77889966000111'),
 ('Eletrônicos Alpha', '88990077000122');
@@ -59,7 +59,7 @@ SELECT * FROM fornecedor;
 
 
 -- persistência de dados na tabela FORMA DE PAGAMENTO
--- DESC forma_pagamento;
+-- DESC forma_pagamento;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO forma_pagamento (tipo_pagamento)
 VALUES
 ("Boleto"),
@@ -70,7 +70,7 @@ SELECT * FROM forma_pagamento;
 
 
 -- persistência de dados na tabela PEDIDO
--- DESC pedido;
+-- DESC pedido;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO pedido (id_cliente, id_endereco, data_pedido, id_status_pedido, id_status_entrega, codigo_rastreamento, frete,data_entrega,id_pagamento)
 VALUES
 (1, 3, '2025-02-01', 1, 1, 'BR3034567896', 20.00, NULL, 1),
@@ -82,7 +82,7 @@ SELECT * FROM pedido;
 
 
 -- persistência de dados na tabela PRODUTO
--- DESC produto;
+-- DESC produto;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO produto (id_categoria,categoria, descricao_produto, valor)
 VALUES
 (1,"Perfumaria", "Boticario", 85.50),
@@ -96,7 +96,7 @@ SELECT * FROM produto;
 
 
 -- persistência de dados na tabela PRODUTO_ESTOQUE
--- DESC produto_estoque;
+-- DESC produto_estoque;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO produto_estoque(id_produto, id_estoque, quantidade)
 VALUES
 (1, 1, 800),
@@ -110,7 +110,7 @@ SELECT * FROM produto_estoque;
 
 
 -- persistência de dados na tabela TERCEIRO_VENDEDOR
--- DESC terceiro_vendedor;
+-- DESC terceiro_vendedor;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO terceiro_vendedor (razao_social, cnpj) VALUES
 ('Loja Amiga', '11222333000199'),
 ('Importadora Fast', '22333444000155'),
@@ -119,7 +119,7 @@ SELECT * FROM terceiro_vendedor;
 
 
 -- persistência de dados na tabela INTERMEDIÁRIA. 
--- DESC produto_terceiro_vendedor;
+-- DESC produto_terceiro_vendedor;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO produto_terceiro_vendedor (id_terceiro, id_produto, quantidade) VALUES
 (1, 2, 50),   -- Carrinho
 (1, 6, 30),   -- Boneca
@@ -131,7 +131,7 @@ SELECT * FROM produto_terceiro_vendedor;
 
 
 -- persistência de dados na tabela INTERMEDIÁRIA. 
--- DESC produto_fornecedor;
+-- DESC produto_fornecedor;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO produto_fornecedor (id_produto, id_fornecedor) VALUES
 (1, 1),  -- Boticario com distribuidora
 (3, 2),  -- Celular com eletrônicos alpha
@@ -142,7 +142,7 @@ SELECT * FROM produto_fornecedor;
 
 
 -- persistência de dados na tabela INTERMEDIÁRIA. 
--- DESC produto_pedido;
+-- DESC produto_pedido;  -- (Comando para exibir a estrutura da tabela (colunas e tipos de dados)
 INSERT INTO produto_pedido (id_produto, id_pedido, quantidade) VALUES
 (1, 1, 2),   -- Boticário x Pedido 1
 (3, 2, 1),   -- Celular x Pedido 2
