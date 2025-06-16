@@ -140,7 +140,7 @@ CREATE TABLE produto_estoque (
     FOREIGN KEY (id_estoque) REFERENCES estoque(id_estoque)
 );
 
--- CRIAÇÃO DE ÍNDICES (MELHORA A PERFORMANCE DE CONSULTAS PARA GRANDE QUANTIDADE DE DADOS)
+-- CRIAÇÃO DE ÍNDICES: melhora o desempenho de consultas em tabelas com grande quantidade de dados
 CREATE INDEX idx_pedido_cliente ON pedido(id_cliente);
 CREATE INDEX idx_pedido_status ON pedido(id_status_pedido);
 CREATE INDEX idx_produto_categoria ON produto(categoria);
