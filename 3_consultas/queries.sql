@@ -5,7 +5,8 @@
 📌 Condições de filtros aos grupos – HAVING Statement
 📌 Crie junções **JOINs** entre tabelas para fornecer uma perspectiva mais complexa dos dados
 
-🔹 Quantos pedidos foram feitos por cada cliente? ## 
+  
+--  Quantos pedidos foram feitos por cada cliente?
 SELECT c.nome_cliente, COUNT(p.id_pedido) AS total_pedidos
 FROM 
   cliente AS c
@@ -17,7 +18,7 @@ GROUP BY c.id_cliente;
 
 
 
-🔹Algum vendedor também é fornecedor?
+-- Algum vendedor também é fornecedor?
 SELECT tv.razao_social
 FROM terceiro_vendedor tv
 JOIN 
@@ -26,7 +27,7 @@ ON
   tv.cnpj = f.cnpj;
 
 
-🔹 Relação de produtos, fornecedores e estoques 
+-- Relação de produtos, fornecedores e estoques 
 SELECT p.descricao_produto, f.razao_social AS fornecedor, e.local AS local_estoque, pe.quantidade
 FROM 
   produto AS p
@@ -51,7 +52,7 @@ ON
   pe.id_estoque = e.id_estoque;
 
 
-🔹Produtos com valores superiores a 100, ordenados decrescente
+-- Produtos com valores superiores a 100, ordenados decrescente
 SELECT descricao_produto, valor
 FROM 
   produto
@@ -61,7 +62,7 @@ ORDER BY valor DESC;
 
 
 
-🔹 Clientes com mais de 1 pedido 
+-- Clientes com mais de 1 pedido 
 SELECT c.nome_cliente, COUNT(p.id_pedido) AS pedidos
 FROM 
   cliente AS c
@@ -75,7 +76,8 @@ HAVING COUNT(p.id_pedido) > 1;
 
 
 
-🔹 Total gasto por cliente 
+
+-- Total gasto por cliente 
 SELECT c.nome_cliente, SUM(pp.quantidade * pr.valor) AS total_gasto
 FROM 
   cliente c
