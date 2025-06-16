@@ -4,9 +4,9 @@ Este repositório contém um conjunto de scripts SQL organizados para criação 
 
 ## 📁 Estrutura do Projeto
 
-1_criacao_banco/ --> Scripts de criação das tabelas
-2_populacao_tabelas/ --> Scripts de inserção de dados de exemplo
-3_consultas/ --> Scripts com consultas SQL (SELECT, JOINs, filtros etc.)
+- `1_criacao_banco/` → Scripts de criação das tabelas  
+- `2_populacao_tabelas/` → Scripts de inserção de dados de exemplo  
+- `3_consultas/` → Scripts com consultas SQL (SELECT, JOINs, filtros etc.)
 
 
 ## 🧪 Como usar este projeto
